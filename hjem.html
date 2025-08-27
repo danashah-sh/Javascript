@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>JavaScript Intro</title>
 </head>
 <body>
   <h1>Hei!</h1>
   <button onclick="sayHello()">Trykk på meg</button>
+  <button onclick="showSize()">Se bredde og høyde</button>
 
   <script>
     function sayHello() {
       alert("Hei, verden!");
+    }
+
+    function showSize() {
+      alert("Vidden er: " + window.innerWidth);
+      alert("Høyden er: " + window.innerHeight);
     }
   </script>
 </body>
