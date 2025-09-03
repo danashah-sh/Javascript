@@ -103,5 +103,35 @@
         document.getElementById("resultat5").innerText = sum100(100);
       </script>
     </section>
+    <section>
+      <h2>Oppgave 6 – Sum av oddetall</h2>
+      <div id="result6"></div>
+      <script>
+        let sum6 = 0;
+        let numbers6 = "";
+        for (let i = 1; i < 100; i += 2) {
+          sum6 += i;
+          numbers6 += i + " ";
+        }
+        document.getElementById("result6").innerHTML =
+          "Tallene er: " + numbers6 + "<br>Summen er: " + sum6;
+      </script>
+    </section>
+
+    <!-- Oppgave 7 -->
+    <section>
+      <h2>Oppgave 7 – Tall delelig med 3</h2>
+      <div id="result7"></div>
+      <script>
+        let sum7 = 0;
+        for (let i = 0; i <= 100; i++) {
+          if (i % 3 === 0) {
+            sum7 += i;
+          }
+        }
+        document.getElementById("result7").innerText = "Sum = " + sum7;
+      </script>
+    </section>
+    
   </body>
 </html>
