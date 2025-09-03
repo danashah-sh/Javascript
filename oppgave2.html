@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oppgaver i JavaScript</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      section {
+        margin-bottom: 50px;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 20px;
+      }
+      h2 {
+        color: rgb(255, 183, 230);
+      }
+      table {
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        border: 1px solid rgb(249, 168, 242);
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Oppgave 1 -->
+    <section>
+      <h2>Oppgave 1 – By</h2>
+      <script>
+        const by = prompt("Hvilken by er Dana født i?");
+        if (by === "Kristiansand") {
+          alert("Riktig! Dana er født i Kristiansand");
+        } else {
+          alert("Feil! Riktig svar er Kristiansand");
+        }
+      </script>
+    </section>
+    -
+
+    <!-- Oppgave 2 -->
+    <section>
+      <h2>Oppgave 2 – Print navnet ditt 1000 ganger</h2>
+      <input type="text" id="userInput" placeholder="Skriv inn navnet ditt" />
+      <button type="button" onclick="tusenLagos()">Print Navnet</button>
+      <div class="printNavnetMitt"></div>
+      <script>
+        function tusenLagos() {
+          const userInput = document.getElementById("userInput").value;
+          const div = document.querySelector(".printNavnetMitt");
+          let content = "";
+          for (let i = 0; i < 1000; i++) {
+            content += userInput + " ";
+          }
+          div.innerHTML = content;
+        }
+      </script>
+    </section>
+
+    <!-- Oppgave 3 -->
+    <section>
+      <h2>Oppgave 3 – Modulus</h2>
+      <div class="matteTing"></div>
+      <script>
+        const result = document.querySelector(".matteTing");
+        result.innerHTML = `
+        15 % 2 = ${15 % 2} </br>
+        15 % 3 = ${15 % 3} </br>
+        10 % 3 = ${10 % 3} </br>
+        12 % 3 = ${12 % 3} </br>
+        16 % 2 = ${16 % 2}
+      `;
+      </script>
+    </section>
+
+    <!-- Oppgave 4 -->
+    <section>
+      <h2>Oppgave 4 – Alder</h2>
+      <script>
+        const gammelNok = prompt("Hvor gammel er du?");
+        function sjekkAlder(gammelNok) {
+          if (gammelNok >= 18) {
+            alert("Du er gammel nok");
+          } else {
+            alert("Du er ikke gammel nok");
+          }
+        }
+        sjekkAlder(gammelNok);
+      </script>
+    </section>
+
+    <!-- Oppgave 5 -->
+    <section>
+      <h2>Oppgave 5 – Summen av de første 100 tallene</h2>
+      <div id="resultat5"></div>
+      <script>
+        const sum100 = (n) => (n * (n + 1)) / 2;
+        document.getElementById("resultat5").innerText = sum100(100);
+      </script>
+    </section>
+  </body>
+</html>
