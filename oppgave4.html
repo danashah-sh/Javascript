@@ -6,22 +6,18 @@
     <title>Funksjoner</title>
 </head>
 <body>
- <script>
-    function visNavn() {
-        alert('Dana')
-    }
-    visNavn()
-</script>
 
+<h2>Oppgave 1: Vis navn med alert</h2>
 <script>
     function visNavn() {
-        alert('Dana')
+        alert('Dana');
     }
 </script>
+<button onclick="visNavn()">Klikk her</button>
 
-<button onclick="visNavn()"> Klikk her </button>
+<hr>
 
-
+<h2>Oppgave 2: Skriv navnet 1000 ganger</h2>
 <script>
 function skrivNavn1000() {
     for (let i = 0; i < 1000; i++) {
@@ -29,53 +25,39 @@ function skrivNavn1000() {
     }
 }
 </script>
-
 <button onclick="skrivNavn1000()">Skriv navnet 1000 ganger</button>
 
+<hr>
 
-
-
-
-
-
-
+<h2>Oppgave 3: Lag en tabell med kvadrat og kubikk</h2>
 <script>
-    function square(i) {
-        return i * i
-    }
+function square(i) {
+    return i * i;
+}
 
-    function third(i) {
-        return i * i * i
-    }
+function third(i) {
+    return i * i * i;
+}
 
-    function getRow(i) {
-        let s = '<tr>'                    // starter en tabell-rad
-        s += '<td>' + i + '</td>'         // tallet selv
-        s += '<td>' + square(i) + '</td>' // kvadratet
-        s += '<td>' + third(i) + '</td>'  // tredje potens
-        s += '</tr>'
-        return s
-    }
+function getRow(i) {
+    let s = '<tr>';                    
+    s += '<td>' + i + '</td>';         
+    s += '<td>' + square(i) + '</td>'; 
+    s += '<td>' + third(i) + '</td>';  
+    s += '</tr>';
+    return s;
+}
 
-    function writeTable() {
-        document.write('<table border="1">')
-        document.write('<tr><th>Tall</th><th>Kvadrat</th><th>Kubikk</th></tr>')
-        for (let i = 0; i < 100; i++) {
-            document.write(getRow(i))
-        }
-        document.write('</table>')
+function writeTable() {
+    document.write('<table border="1">');
+    document.write('<tr><th>Tall</th><th>Kvadrat</th><th>Kubikk</th></tr>');
+    for (let i = 0; i < 100; i++) {
+        document.write(getRow(i));
     }
+    document.write('</table>');
+}
 </script>
-
 <button onclick="writeTable()">Start!</button>
-
-
-
-
-
-
-
-
 
 </body>
 </html>
