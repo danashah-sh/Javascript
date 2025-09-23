@@ -1,48 +1,51 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"> 
   <title>JavaScript</title>
 </head>
 <body>  
 
-  <section>
+  <!-- Oppgave 1 -->
+  <section> <!-- En seksjon for oppgave 1 -->
+    <h1>Oppgave 1</h1>
     <p>Lag en webside med en knapp. Teksten i knappen skal være "Vis mitt navn". Når man trykker på knappen, skal det dukke opp en melding som viser ditt navn.</p>
-    <button onclick="alert('Dana!')">MITT NAVN</button>
+    <button onclick="alert('Dana!')">MITT NAVN</button> 
+    <!-- Knapp: når du trykker, vises en alert med teksten "Dana!" -->
   </section>
 
-
-   <section>
+  <!-- Oppgave 2 -->
+  <section> <!-- En seksjon for oppgave 2 -->
     <h1>Oppgave 2</h1>
     <h2
-      onmouseenter="this.style.color = 'red'"
-      onmouseleave="this.style.color = 'blue'"
-      onclick="alert('feil')"
-    >Mus over her</h2>
+      onmouseenter="this.style.color = 'red'"  <!-- Når musa går over teksten → blir rød -->
+      onmouseleave="this.style.color = 'blue'" <!-- Når musa går bort igjen → blir blå -->
+      onclick="alert('feil')"                  <!-- Hvis du klikker → vises "feil" -->
+    >Mus over her</h2> <!-- Teksten som endrer seg -->
   </section>
 
-
-  
-  <section>
+  <!-- Oppgave 3 -->
+  <section> <!-- En seksjon for oppgave 3 -->
+    <h1>Oppgave 3</h1>
     <p>Lag en webside med 5 knapper. Alle knappene skal ha det samme innholdet, "Klikk meg". Velg ut en tilfeldig knapp – denne skal vise "Riktig!"</p>
-    <button onclick="alert('Feil!')">KLIKK MEG</button>
-    <button onclick="alert('Feil!')">KLIKK MEG</button>
-    <button onclick="alert('Feil!')">KLIKK MEG</button>
-    <button onclick="alert('Riktig!')">KLIKK MEG</button>
-    <button onclick="alert('Feil!')">KLIKK MEG</button>
+    <button onclick="alert('Feil!')">KLIKK MEG</button>  <!-- Feil -->
+    <button onclick="alert('Feil!')">KLIKK MEG</button>  <!-- Feil -->
+    <button onclick="alert('Feil!')">KLIKK MEG</button>  <!-- Feil -->
+    <button onclick="alert('Riktig!')">KLIKK MEG</button> <!-- Riktig knapp -->
+    <button onclick="alert('Feil!')">KLIKK MEG</button>  <!-- Feil -->
   </section>
 
-    <section>
+  <!-- Oppgave 4 -->
+  <section> <!-- En seksjon for oppgave 4 -->
     <h1>Oppgave 4</h1>
-    <ol>
-      <li><button onclick="alert('Feil')">15 uker</button></li>
-      <li><button onclick="alert('Feil!')">25 dager</button></li>
-      <li><button onclick="alert('Riktig')">63 dager</button></li>
-      <li><button onclick="alert('Feil!')">34 dager</button></li>
+    <p>Hvor mange dager er det i 9 uker?</p>
+    <ol> <!-- Nummerert liste -->
+      <li><button onclick="alert('Feil')">15 uker</button></li> <!-- Feil svar -->
+      <li><button onclick="alert('Feil!')">25 dager</button></li> <!-- Feil svar -->
+      <li><button onclick="alert('Riktig')">63 dager</button></li> <!-- Riktig svar -->
+      <li><button onclick="alert('Feil!')">34 dager</button></li> <!-- Feil svar -->
     </ol>
   </section>
-
-   
 
 </body>
 </html>
