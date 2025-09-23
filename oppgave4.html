@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funksjoner</title>
 </head>
+
 <body>
 
-<h2>Oppgave 1: Vis navn med alert</h2>
-<script>
-    function visNavn() {
-        alert('Dana');
-    }
-</script>
-<button onclick="visNavn()">Klikk her</button>
+    <!-- Oppgave 1 -->
+    <h2>Oppgave 1: Vis navn med alert</h2>
+    <script>
+        function visNavn() {            // Lager en funksjon som heter visNavn
+            alert('Dana');              // Når den kjører → viser en alert med "Dana"
+        }
+    </script>
+    <button onclick="visNavn()">Klikk her</button>
+    <!-- Knapp: når du trykker på den → kjører funksjonen visNavn() -->
 
-<hr>
+    <hr> <!-- Vannrett linje som deler opp oppgavene -->
 
-<h2>Oppgave 2: Skriv navnet 1000 ganger</h2>
-<script>
-function skrivNavn1000() {
-    for (let i = 0; i < 1000; i++) {
-        document.write('Dana ');
-    }
-}
-</script>
-<button onclick="skrivNavn1000()">Skriv navnet 1000 ganger</button>
+    <!-- Oppgave 2 -->
+    <h2>Oppgave 2: Skriv navnet 1000 ganger</h2>
+    <script>
+        function skrivNavn1000() {          // Funksjon som skriver navnet 1000 ganger
+            for (let i = 0; i < 1000; i++) { // Teller fra 0 til 999 (1000 ganger)
+                document.write('Dana ');     // Skriver "Dana " på nettsiden hver gang
+            }
+        }
+    </script>
+    <button onclick="skrivNavn1000()">Skriv navnet 1000 ganger</button>
+    <!-- Knapp som starter løkka over og skriver navnet -->
 
-<hr>
+    <hr>
 
-<h2>Oppgave 3: Lag en tabell med kvadrat og kubikk</h2>
-<script>
-function square(i) {
-    return i * i;
-}
+    <!-- Oppgave 3 -->
+    <h2>Oppgave 3: Lag en tabell med kvadrat og kubikk</h2>
+    <script>
+        function square(i) {                // Funksjon som regner ut kvadratet av et tall
+            return i * i;
+        }
 
-function third(i) {
-    return i * i * i;
-}
+        function third(i) {                 // Funksjon som regner ut kubikk (tallet * seg selv 3 ganger)
+            return i * i * i;
+        }
 
-function getRow(i) {
-    let s = '<tr>';                    
-    s += '<td>' + i + '</td>';         
-    s += '<td>' + square(i) + '</td>'; 
-    s += '<td>' + third(i) + '</td>';  
-    s += '</tr>';
-    return s;
-}
+        function getRow(i) {                // Funksjon som lager en tabellrad for tallet i
+            let s = '<tr>';                 // Starter en tabellrad
+            s += '<td>' + i + '</td>';      // Første celle = tallet selv
+            s += '<td>' + square(i) + '</td>'; // Andre celle = kvadrat
+            s += '<td>' + third(i) + '</td>';  // Tredje celle = kubikk
+            s += '</tr>';                   // Avslutter raden
+            return s;                       // Returnerer HTML-koden for tabellraden
+        }
 
-function writeTable() {
-    document.write('<table border="1">');
-    document.write('<tr><th>Tall</th><th>Kvadrat</th><th>Kubikk</th></tr>');
-    for (let i = 0; i < 100; i++) {
-        document.write(getRow(i));
-    }
-    document.write('</table>');
-}
-</script>
-<button onclick="writeTable()">Start!</button>
+        function writeTable() {             // Funksjon som lager hele tabellen
+            document.write('<table border="1">'); // Starter en tabell med ramme
+            document.write('<tr><th>Tall</th><th>Kvadrat</th><th>Kubikk</th></tr>'); // Overskrifter
+            for (let i = 0; i < 100; i++) { // Teller fra 0 til 99
+                document.write(getRow(i));  // Legger til en rad for hvert tall
+            }
+            document.write('</table>');     // Avslutter tabellen
+        }
+    </script>
+    <button onclick="writeTable()">Start!</button>
+    <!-- Knapp som starter funksjonen writeTable() og viser tabellen -->
 
 </body>
+
 </html>
