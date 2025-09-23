@@ -1,43 +1,44 @@
 <!DOCTYPE html>
-<html lang="no">
-  <head>
+<html lang="no"> 
+  <head> 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oppgaver i JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Oppgaver i JavaScript</title> 
     <style>
       body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
+        font-family: Arial, sans-serif; /* Setter skrifttypen */
+        padding: 20px; /* Lager luft rundt innholdet */
       }
       section {
-        margin-bottom: 50px;
-        border-bottom: 2px solid #000000;
-        padding-bottom: 20px;
+        margin-bottom: 50px; /* Avstand under hver seksjon */
+        border-bottom: 2px solid #000000; /* Strek under hver seksjon */
+        padding-bottom: 20px; /* Luft nederst i seksjonen */
       }
       h2 {
-        color: rgb(255, 183, 230);
+        color: rgb(255, 183, 230); /* Rosa overskrifter */
       }
       table {
-        border-collapse: collapse;
-        margin-top: 10px;
+        border-collapse: collapse; /* Slår sammen tabellkanter */
+        margin-top: 10px; /* Litt luft over tabellen */
       }
       th,
       td {
-        border: 1px solid rgb(249, 168, 242);
-        padding: 5px;
+        border: 1px solid rgb(249, 168, 242); /* Rosa kantlinjer */
+        padding: 5px; /* Litt luft i hver celle */
       }
     </style>
   </head>
-  <body>
+  <body> <!-- Her starter innholdet på nettsiden -->
+
     <!-- Oppgave 1 -->
     <section>
       <h2>Oppgave 1 – By</h2>
       <script>
-        const by = prompt("Hvilken by er Dana født i?");
-        if (by === "Kristiansand") {
-          alert("Riktig! Dana er født i Kristiansand");
+        const by = prompt("Hvilken by er Dana født i?"); // Spør brukeren om en by
+        if (by === "Kristiansand") { // Sjekker om svaret er "Kristiansand"
+          alert("Riktig! Dana er født i Kristiansand"); // Viser melding hvis svaret er riktig
         } else {
-          alert("Feil! Riktig svar er Kristiansand");
+          alert("Feil! Riktig svar er Kristiansand"); // Viser melding hvis svaret er feil
         }
       </script>
     </section>
@@ -46,18 +47,18 @@
     <!-- Oppgave 2 -->
     <section>
       <h2>Oppgave 2 – Print navnet ditt 1000 ganger</h2>
-      <input type="text" id="userInput" placeholder="Skriv inn navnet ditt" />
-      <button type="button" onclick="tusenLagos()">Print Navnet</button>
-      <div class="printNavnetMitt"></div>
+      <input type="text" id="userInput" placeholder="Skriv inn navnet ditt" /> <!-- Tekstfelt for navn -->
+      <button type="button" onclick="tusenLagos()">Print Navnet</button> <!-- Knapp som kjører funksjon -->
+      <div class="printNavnetMitt"></div> <!-- Her blir resultatet skrevet ut -->
       <script>
-        function tusenLagos() {
-          const userInput = document.getElementById("userInput").value;
-          const div = document.querySelector(".printNavnetMitt");
-          let content = "";
-          for (let i = 0; i < 1000; i++) {
-            content += userInput + " ";
+        function tusenLagos() { // Funksjonen kjører når knappen trykkes
+          const userInput = document.getElementById("userInput").value; // Henter navnet fra input
+          const div = document.querySelector(".printNavnetMitt"); // Finner div for å skrive ut
+          let content = ""; // Starter med tom tekst
+          for (let i = 0; i < 1000; i++) { // Løkke som kjører 1000 ganger
+            content += userInput + " "; // Legger til navnet for hver runde
           }
-          div.innerHTML = content;
+          div.innerHTML = content; // Viser alt i div-en
         }
       </script>
     </section>
@@ -65,15 +66,15 @@
     <!-- Oppgave 3 -->
     <section>
       <h2>Oppgave 3 – Modulus</h2>
-      <div class="matteTing"></div>
+      <div class="matteTing"></div> <!-- Tom div for resultat -->
       <script>
-        const result = document.querySelector(".matteTing");
+        const result = document.querySelector(".matteTing"); // Finner div
         result.innerHTML = `
-        15 % 2 = ${15 % 2} </br>
-        15 % 3 = ${15 % 3} </br>
-        10 % 3 = ${10 % 3} </br>
-        12 % 3 = ${12 % 3} </br>
-        16 % 2 = ${16 % 2}
+        15 % 2 = ${15 % 2} </br> <!-- Resten når 15 deles på 2 -->
+        15 % 3 = ${15 % 3} </br> <!-- Resten når 15 deles på 3 -->
+        10 % 3 = ${10 % 3} </br> <!-- Resten når 10 deles på 3 -->
+        12 % 3 = ${12 % 3} </br> <!-- Resten når 12 deles på 3 -->
+        16 % 2 = ${16 % 2}       <!-- Resten når 16 deles på 2 -->
       `;
       </script>
     </section>
@@ -82,63 +83,65 @@
     <section>
       <h2>Oppgave 4 – Alder</h2>
       <script>
-        const gammelNok = prompt("Hvor gammel er du?");
-        function sjekkAlder(gammelNok) {
-          if (gammelNok >= 18) {
-            alert("Du er gammel nok");
+        const gammelNok = prompt("Hvor gammel er du?"); // Spør brukerens alder
+        function sjekkAlder(gammelNok) { // Funksjon som sjekker alder
+          if (gammelNok >= 18) { // Hvis alder er 18 eller mer
+            alert("Du er gammel nok"); // Viser melding
           } else {
-            alert("Du er ikke gammel nok");
+            alert("Du er ikke gammel nok"); // Ellers viser annen melding
           }
         }
-        sjekkAlder(gammelNok);
+        sjekkAlder(gammelNok); // Kaller funksjonen med svaret fra prompt
       </script>
     </section>
 
     <!-- Oppgave 5 -->
     <section>
       <h2>Oppgave 5 – Summen av de første 100 tallene</h2>
-      <div id="resultat5"></div>
+      <div id="resultat5"></div> <!-- Tom div for resultat -->
       <script>
-        const sum100 = (n) => (n * (n + 1)) / 2;
-        document.getElementById("resultat5").innerText = sum100(100);
+        const sum100 = (n) => (n * (n + 1)) / 2; // Formel for sum av tallene fra 1 til n
+        document.getElementById("resultat5").innerText = sum100(100); // Viser summen (5050)
       </script>
     </section>
+
+    <!-- Oppgave 6 -->
     <section>
       <h2>Oppgave 6 – Sum av oddetall</h2>
-      <div id="result6"></div>
+      <div id="result6"></div> <!-- Tom div for resultat -->
       <script>
-        let sum6 = 0;
-        let numbers6 = "";
-        for (let i = 1; i < 100; i += 2) {
-          sum6 += i;
-          numbers6 += i + " ";
+        let sum6 = 0; // Starter summen på 0
+        let numbers6 = ""; // Tom tekststreng for tallene
+        for (let i = 1; i < 100; i += 2) { // Teller opp alle oddetall under 100
+          sum6 += i; // Legger til oddetall i summen
+          numbers6 += i + " "; // Legger tallene inn i tekst
         }
         document.getElementById("result6").innerHTML =
-          "Tallene er: " + numbers6 + "<br>Summen er: " + sum6;
+          "Tallene er: " + numbers6 + "<br>Summen er: " + sum6; // Skriver ut tall og sum
       </script>
     </section>
 
     <!-- Oppgave 7 -->
     <section>
       <h2>Oppgave 7 – Tall delelig med 3</h2>
-      <div id="result7"></div>
+      <div id="result7"></div> <!-- Tom div for resultat -->
       <script>
-        let sum7 = 0;
-        for (let i = 0; i <= 100; i++) {
-          if (i % 3 === 0) {
-            sum7 += i;
+        let sum7 = 0; // Starter summen på 0
+        for (let i = 0; i <= 100; i++) { // Teller fra 0 til 100
+          if (i % 3 === 0) { // Sjekker om tallet er delelig med 3
+            sum7 += i; // Legger til tallet i summen
           }
         }
-        document.getElementById("result7").innerText = "Sum = " + sum7;
+        document.getElementById("result7").innerText = "Sum = " + sum7; // Viser summen
       </script>
     </section>
 
-
-<section>
-    <h1>Oppgave 1</h1>
-    <p>Lag en webside med en knapp. Teksten i knappen skal være "Vis mitt navn". Når man trykker på knappen, skal det dukke opp en melding som viser ditt navn.</p>
-    <button onclick="alert('Edita!')">MITT NAVN</button>
-  </section>
+    <!-- Ekstra oppgave -->
+    <section>
+      <h1>Oppgave 1</h1>
+      <p>Lag en webside med en knapp. Teksten i knappen skal være "Vis mitt navn". Når man trykker på knappen, skal det dukke opp en melding som viser ditt navn.</p>
+      <button onclick="alert('Edita!')">MITT NAVN</button> <!-- Knapp som viser "Edita!" når du trykker -->
+    </section>
 
   </body>
 </html>
