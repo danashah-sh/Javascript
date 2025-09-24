@@ -3,30 +3,8 @@
   <head> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>Oppgaver i JavaScript</title> 
-    <style>
-      body {
-        font-family: Arial, sans-serif; /* Setter skrifttypen */
-        padding: 20px; /* Lager luft rundt innholdet */
-      }
-      section {
-        margin-bottom: 50px; /* Avstand under hver seksjon */
-        border-bottom: 2px solid #000000; /* Strek under hver seksjon */
-        padding-bottom: 20px; /* Luft nederst i seksjonen */
-      }
-      h2 {
-        color: rgb(255, 183, 230); /* Rosa overskrifter */
-      }
-      table {
-        border-collapse: collapse; /* Slår sammen tabellkanter */
-        margin-top: 10px; /* Litt luft over tabellen */
-      }
-      th,
-      td {
-        border: 1px solid rgb(249, 168, 242); /* Rosa kantlinjer */
-        padding: 5px; /* Litt luft i hver celle */
-      }
-    </style>
+    <title>Oppgaver i JavaScript</title>
+    <link rel="stylesheet" href="styles.css"> 
   </head>
   <body> <!-- Her starter innholdet på nettsiden -->
 
@@ -61,41 +39,18 @@
     <section>
       <h2>Oppgave 5 – Summen av de første 100 tallene</h2>
       <div id="resultat5"></div> <!-- Tom div for resultat -->
-      <script>
-        const sum100 = (n) => (n * (n + 1)) / 2; // Formel for sum av tallene fra 1 til n
-        document.getElementById("resultat5").innerText = sum100(100); // Viser summen (5050)
-      </script>
     </section>
 
     <!-- Oppgave 6 -->
     <section>
       <h2>Oppgave 6 – Sum av oddetall</h2>
       <div id="result6"></div> <!-- Tom div for resultat -->
-      <script>
-        let sum6 = 0; // Starter summen på 0
-        let numbers6 = ""; // Tom tekststreng for tallene
-        for (let i = 1; i < 100; i += 2) { // Teller opp alle oddetall under 100
-          sum6 += i; // Legger til oddetall i summen
-          numbers6 += i + " "; // Legger tallene inn i tekst
-        }
-        document.getElementById("result6").innerHTML =
-          "Tallene er: " + numbers6 + "<br>Summen er: " + sum6; // Skriver ut tall og sum
-      </script>
     </section>
 
     <!-- Oppgave 7 -->
     <section>
       <h2>Oppgave 7 – Tall delelig med 3</h2>
       <div id="result7"></div> <!-- Tom div for resultat -->
-      <script>
-        let sum7 = 0; // Starter summen på 0
-        for (let i = 0; i <= 100; i++) { // Teller fra 0 til 100
-          if (i % 3 === 0) { // Sjekker om tallet er delelig med 3
-            sum7 += i; // Legger til tallet i summen
-          }
-        }
-        document.getElementById("result7").innerText = "Sum = " + sum7; // Viser summen
-      </script>
     </section>
 
     <!-- Ekstra oppgave -->

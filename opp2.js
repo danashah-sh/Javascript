@@ -40,6 +40,33 @@ function sjekkAlder(gammelNok) { // Funksjon som sjekker alder
         document.getElementById("svar4").innerHTML =  'Du er gamme nok';
     } else {
         alert("Du er ikke gammel nok"); // Ellers viser annen melding
+        document.getElementById("svar4").innerHTML =  'Du er ikke gamme nok';
     }
 }
 sjekkAlder(gammelNok); // Kaller funksjonen med svaret fra prompt
+
+// oppgave 5
+
+const sum100 = (n) => (n * (n + 1)) / 2; // Formel for sum av tallene fra 1 til n
+document.getElementById("resultat5").innerText = sum100(100); // Viser summen (5050)
+
+// oppgave 6
+
+let sum6 = 0; // Starter summen på 0
+let numbers6 = ""; // Tom tekststreng for tallene
+
+for (let i = 1; i < 100; i += 2) { // Teller opp alle oddetall under 100      
+    sum6 += i; // Legger til oddetall i summen
+    numbers6 += i + " "; // Legger tallene inn i tekst
+}
+document.getElementById("result6").innerHTML = `Tallene er ${numbers6} + <br>Summen er: ${sum6}`; // Skriver ut tall og sum
+
+// oppgave 7
+
+let sum7 = 0; // Starter summen på 0
+for (let i = 0; i <= 100; i++) { // Teller fra 0 til 100
+    if (i % 3 === 0) { // Sjekker om tallet er delelig med 3
+        sum7 += i; // Legger til tallet i summen
+    }
+}
+document.getElementById("result7").innerText = "Sum = " + sum7; // Viser summen
