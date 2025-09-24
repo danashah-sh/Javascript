@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif; /* Setter skrifttypen */
+    padding: 20px; /* Lager luft rundt innholdet */
+}
+section {
+    margin-bottom: 50px; /* Avstand under hver seksjon */
+    border-bottom: 2px solid #000000; /* Strek under hver seksjon */
+    padding-bottom: 20px; /* Luft nederst i seksjonen */
+}
+h2 {
+    color: rgb(255, 183, 230); /* Rosa overskrifter */
+}
+
+table {
+    border-collapse: collapse; /* Slår sammen tabellkanter */
+    margin-top: 10px; /* Litt luft over tabellen */
+}
+th,
+td {
+    border: 1px solid rgb(249, 168, 242); /* Rosa kantlinjer */
+    padding: 5px; /* Litt luft i hver celle */
+}

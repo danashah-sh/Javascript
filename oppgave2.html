@@ -33,14 +33,7 @@
     <!-- Oppgave 1 -->
     <section>
       <h2>Oppgave 1 – By</h2>
-      <script>
-        const by = prompt("Hvilken by er Dana født i?"); // Spør brukeren om en by
-        if (by === "Kristiansand") { // Sjekker om svaret er "Kristiansand"
-          alert("Riktig! Dana er født i Kristiansand"); // Viser melding hvis svaret er riktig
-        } else {
-          alert("Feil! Riktig svar er Kristiansand"); // Viser melding hvis svaret er feil
-        }
-      </script>
+      <p id="svar1">__</p>
     </section>
     -
 
@@ -50,49 +43,18 @@
       <input type="text" id="userInput" placeholder="Skriv inn navnet ditt" /> <!-- Tekstfelt for navn -->
       <button type="button" onclick="tusenLagos()">Print Navnet</button> <!-- Knapp som kjører funksjon -->
       <div class="printNavnetMitt"></div> <!-- Her blir resultatet skrevet ut -->
-      <script>
-        function tusenLagos() { // Funksjonen kjører når knappen trykkes
-          const userInput = document.getElementById("userInput").value; // Henter navnet fra input
-          const div = document.querySelector(".printNavnetMitt"); // Finner div for å skrive ut
-          let content = ""; // Starter med tom tekst
-          for (let i = 0; i < 1000; i++) { // Løkke som kjører 1000 ganger
-            content += userInput + " "; // Legger til navnet for hver runde
-          }
-          div.innerHTML = content; // Viser alt i div-en
-        }
-      </script>
     </section>
 
     <!-- Oppgave 3 -->
     <section>
       <h2>Oppgave 3 – Modulus</h2>
       <div class="matteTing"></div> <!-- Tom div for resultat -->
-      <script>
-        const result = document.querySelector(".matteTing"); // Finner div
-        result.innerHTML = `
-        15 % 2 = ${15 % 2} </br> <!-- Resten når 15 deles på 2 -->
-        15 % 3 = ${15 % 3} </br> <!-- Resten når 15 deles på 3 -->
-        10 % 3 = ${10 % 3} </br> <!-- Resten når 10 deles på 3 -->
-        12 % 3 = ${12 % 3} </br> <!-- Resten når 12 deles på 3 -->
-        16 % 2 = ${16 % 2}       <!-- Resten når 16 deles på 2 -->
-      `;
-      </script>
     </section>
 
     <!-- Oppgave 4 -->
     <section>
       <h2>Oppgave 4 – Alder</h2>
-      <script>
-        const gammelNok = prompt("Hvor gammel er du?"); // Spør brukerens alder
-        function sjekkAlder(gammelNok) { // Funksjon som sjekker alder
-          if (gammelNok >= 18) { // Hvis alder er 18 eller mer
-            alert("Du er gammel nok"); // Viser melding
-          } else {
-            alert("Du er ikke gammel nok"); // Ellers viser annen melding
-          }
-        }
-        sjekkAlder(gammelNok); // Kaller funksjonen med svaret fra prompt
-      </script>
+      <p id="svar4">__</p>
     </section>
 
     <!-- Oppgave 5 -->
@@ -142,6 +104,6 @@
       <p>Lag en webside med en knapp. Teksten i knappen skal være "Vis mitt navn". Når man trykker på knappen, skal det dukke opp en melding som viser ditt navn.</p>
       <button onclick="alert('Edita!')">MITT NAVN</button> <!-- Knapp som viser "Edita!" når du trykker -->
     </section>
-
+    <script src="opp2.js"></script>
   </body>
 </html>
